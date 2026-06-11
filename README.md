@@ -40,6 +40,49 @@
 
 ---
 
+---
+
+# 📂 Dataset
+
+The dataset used for training and evaluation consists of construction and building surface images covering multiple defect categories commonly encountered during structural inspections.
+
+### 📊 Dataset Categories
+
+- ✅ Healthy Surface
+- 💧 Water Seepage
+- 🦠 Mold Growth
+- 🌿 Algae Formation
+- 🎨 Surface Stains
+- 🏢 Major Cracks
+- 🏢 Minor Cracks
+- 🧱 Spalling
+- 🎭 Peeling Paint
+
+### 🔗 Dataset Access
+
+The complete dataset is available here:
+
+📁 Google Drive Dataset Repository
+
+https://drive.google.com/drive/folders/1SbuypC_pil5ivAY1XNpoJo8AjghUhqSw?usp=drive_link
+
+### 📌 Dataset Usage
+
+The dataset was used for:
+
+- Training the Router Model
+- Training the Structural Specialist Model
+- Training the Moisture Specialist Model
+- Model Validation and Testing
+- Performance Evaluation
+
+### ⚠️ Note
+
+This dataset is provided strictly for educational, academic, and research purposes. Users should verify data quality and licensing requirements before commercial usage.
+
+---
+
+
 # 📖 Overview
 
 ConstructGuard AI is a full-stack AI application developed to assist engineers, inspectors, researchers, and construction professionals in identifying visible construction defects from images.
