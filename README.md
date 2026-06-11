@@ -44,11 +44,18 @@
 
 # 📂 Dataset
 
-The dataset used for training and evaluation consists of construction and building surface images covering multiple defect categories commonly encountered during structural inspections.
+The dataset used for training and evaluating ConstructGuard AI contains images of various construction defects and healthy building surfaces.
 
-### 📊 Dataset Categories
+### Dataset Access
 
-- ✅ Healthy Surface
+📁 Google Drive Dataset Repository:
+
+https://drive.google.com/drive/folders/15lIJnX8CfX38zZy8SdtKQtN-jW_hozUF?usp=drive_link
+
+### Dataset Categories
+
+The dataset includes images belonging to:
+
 - 💧 Water Seepage
 - 🦠 Mold Growth
 - 🌿 Algae Formation
@@ -56,29 +63,114 @@ The dataset used for training and evaluation consists of construction and buildi
 - 🏢 Major Cracks
 - 🏢 Minor Cracks
 - 🧱 Spalling
-- 🎭 Peeling Paint
+- 🎨 Peeling Paint
+- ✅ Healthy Surfaces
 
-### 🔗 Dataset Access
+### Dataset Purpose
 
-The complete dataset is available here:
+The dataset was curated and organized to support:
 
-📁 Google Drive Dataset Repository
+- Construction defect detection
+- Structural condition assessment
+- Moisture-related damage identification
+- Deep learning model training and evaluation
+
+---
+
+# 🧠 Trained Models
+
+ConstructGuard AI employs a hierarchical deep learning architecture consisting of multiple TensorFlow/Keras models.
+
+### Model Repository
+
+📁 Google Drive Models Repository:
 
 https://drive.google.com/drive/folders/1SbuypC_pil5ivAY1XNpoJo8AjghUhqSw?usp=drive_link
 
-### 📌 Dataset Usage
+### Models Used
 
-The dataset was used for:
+#### 🚦 Router Model
 
-- Training the Router Model
-- Training the Structural Specialist Model
-- Training the Moisture Specialist Model
-- Model Validation and Testing
-- Performance Evaluation
+**File:**
 
-### ⚠️ Note
+```text
+cg_router.keras
+```
 
-This dataset is provided strictly for educational, academic, and research purposes. Users should verify data quality and licensing requirements before commercial usage.
+**Purpose:**
+
+- Performs high-level defect categorization.
+- Routes images to the appropriate specialist model.
+
+---
+
+#### 💧 Moisture Specialist Model
+
+**File:**
+
+```text
+cg_moisture_specialist.keras
+```
+
+**Purpose:**
+
+Classifies moisture-related defects:
+
+- Water Seepage
+- Mold
+- Algae
+- Stains
+
+---
+
+#### 🏢 Structural Specialist Model
+
+**File:**
+
+```text
+cg_structural_specialist.keras
+```
+
+**Purpose:**
+
+Classifies structural defects:
+
+- Major Crack
+- Minor Crack
+- Spalling
+- Peeling Paint
+- Healthy Surface
+
+---
+
+### Model Architecture
+
+The inference pipeline follows:
+
+```text
+Input Image
+     │
+     ▼
+Router Model
+     │
+ ┌───┴────┐
+ ▼        ▼
+Moisture  Structural
+Model     Model
+     │
+     ▼
+ Gemini AI Analysis
+     │
+     ▼
+ Final Inspection Report
+```
+
+### Framework
+
+- TensorFlow
+- Keras
+- OpenCV
+- NumPy
 
 ---
 
