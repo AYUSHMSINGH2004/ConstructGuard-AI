@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: clip;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  background-attachment: fixed;
+  color: hsl(var(--foreground));
+}
+
+@layer base {
+  :root {
+    /* Premium SaaS Colors */
+    --primary: 224 71% 4%;
+    --primary-light: 226 52% 18%;
+    --primary-accent: 239 63% 50%;
+    
+    --accent-blue: 217 91% 60%;
+    --accent-violet: 280 85% 65%;
+    --accent-cyan: 187 100% 42%;
+    --accent-emerald: 142 71% 45%;
+
+    /* Semantic Tokens */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 239 63% 50%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --radius: 12px;
+
+    /* Status / Severity */
+    --severity-critical: 0 84% 60%;
+    --severity-high: 24 95% 53%;
+    --severity-medium: 45 93% 47%;
+    --severity-low: 142 71% 45%;
+
+    /* Dashboard Telemetry Status Colors */
+    --status-success: 142 71% 45%;
+    --status-processing: 217 91% 60%;
+    --status-warning: 38 92% 50%;
+    --status-error: 0 84% 60%;
+
+    /* Extra UI Tokens */
+    --text-white: #FFFFFF;
+    --text-light-gray: #E5E7EB;
+    --text-muted-gray: #94A3B8;
+  }
+}
+
+@layer components {
+  /* Premium SaaS Glasses & Utilities */
+  .glass {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius);
+  }
+
+  .glass-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  }
+
+  .glass-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(15, 23, 42, 0.6);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary-accent)) 0%, hsl(var(--accent-violet)) 100%);
+    color: var(--text-white);
+    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .gradient-primary:hover:not(:disabled) {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.4);
+  }
+
+  .gradient-primary:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px -5px rgba(139, 92, 246, 0.3);
+  }
+
+  .premium-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .premium-border {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Form & Input enhancements */
+  .premium-input {
+    background-color: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+    transition: all 0.3s ease;
+    border-radius: var(--radius);
+  }
+
+  .premium-input:focus,
+  .premium-input:focus-within {
+    outline: none;
+    border-color: hsl(var(--accent-blue));
+    box-shadow: 0 0 0 1px hsl(var(--accent-blue) / 0.3), inset 0 0 15px hsl(var(--accent-blue) / 0.1);
+    background-color: rgba(15, 23, 42, 0.6);
+  }
+
+  /* Monospace Technical Logs */
+  .tech-log {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.8125rem;
+    letter-spacing: -0.025em;
+  }
+
+  /* Professional Report Styles */
+  .report-card {
+    @apply bg-[#0B1120] border border-white/10 rounded-xl overflow-hidden shadow-lg mb-6;
+  }
+  
+  .report-card-header {
+    @apply flex items-center gap-3 px-6 py-4 bg-white/5 border-b border-white/10;
+  }
+  
+  .report-card-title {
+    @apply text-sm font-bold text-foreground tracking-widest uppercase;
+  }
+  
+  .report-card-content {
+    @apply p-6 text-muted-foreground leading-relaxed text-sm;
+  }
+
+  /* Severity Badges */
+  .severity-badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider border;
+  }
+  .severity-badge-low {
+    @apply text-emerald-400 bg-emerald-400/10 border-emerald-400/20;
+  }
+  .severity-badge-medium {
+    @apply text-yellow-400 bg-yellow-400/10 border-yellow-400/20;
+  }
+  .severity-badge-high {
+    @apply text-orange-400 bg-orange-400/10 border-orange-400/20;
+  }
+  .severity-badge-critical {
+    @apply text-rose-400 bg-rose-400/10 border-rose-400/20;
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
+}
