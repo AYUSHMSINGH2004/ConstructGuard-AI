@@ -1,6 +1,6 @@
-<div align="center">
-
 # 🏗️ ConstructGuard AI
+
+<div align="center">
 
 ### AI-Powered Construction Defect Detection & Intelligent Inspection Platform
 
@@ -8,17 +8,17 @@
 <img src="https://img.shields.io/badge/FastAPI-Backend-green?style=for-the-badge" />
 <img src="https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react" />
 <img src="https://img.shields.io/badge/TensorFlow-Deep%20Learning-FF6F00?style=for-the-badge&logo=tensorflow" />
-<img src="https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google" />
+<img src="https://img.shields.io/badge/Gemini%202.5%20Flash-Generative%20AI-4285F4?style=for-the-badge&logo=google" />
 
 <br>
 
-<img src="https://img.shields.io/github/stars/AYUSHMSINGH2004/ConstructGuard-AI?style=social" />
-<img src="https://img.shields.io/github/forks/AYUSHMSINGH2004/ConstructGuard-AI?style=social" />
-<img src="https://img.shields.io/github/license/AYUSHMSINGH2004/ConstructGuard-AI" />
+[![Frontend](https://img.shields.io/badge/Frontend-Live-success?style=for-the-badge)](https://0cb1d45e.constructguard-ai.pages.dev/)
+[![Backend](https://img.shields.io/badge/Backend-Live-blue?style=for-the-badge)](https://ayushmsingh2004-constructguard-backend.hf.space/)
+[![API Docs](https://img.shields.io/badge/API-Documentation-orange?style=for-the-badge)](https://ayushmsingh2004-constructguard-backend.hf.space/docs)
 
 ### 🔍 Detect • Analyze • Explain • Recommend
 
-**ConstructGuard AI** leverages Deep Learning and Generative AI to automatically identify construction defects from images and generate professional inspection reports with actionable recommendations.
+ConstructGuard AI leverages Deep Learning, Computer Vision, and Google Gemini 2.5 Flash to automatically identify construction defects from images and generate professional inspection reports with actionable recommendations.
 
 </div>
 
@@ -26,129 +26,158 @@
 
 # 🌐 Live Deployment
 
-### 🚀 Frontend
+## 🚀 Frontend
 
-🔗 https://0cb1d45e.constructguard-ai.pages.dev/
+https://0cb1d45e.constructguard-ai.pages.dev/
 
-### ⚡ Backend API
+## ⚡ Backend API
 
-🔗 https://ayushmsingh2004-constructguard-backend.hf.space/
+https://ayushmsingh2004-constructguard-backend.hf.space/
 
-### 📚 API Documentation
+## 📚 API Documentation
 
-🔗 https://ayushmsingh2004-constructguard-backend.hf.space/docs
-
----
+https://ayushmsingh2004-constructguard-backend.hf.space/docs
 
 ---
 
-# 📂 Dataset
+# 📖 Overview
 
-The dataset used for training and evaluating ConstructGuard AI contains images of various construction defects and healthy building surfaces.
+ConstructGuard AI is an intelligent construction inspection platform designed to assist engineers, researchers, inspectors, and infrastructure professionals in identifying visible construction defects using Artificial Intelligence.
 
-### Dataset Access
+The platform combines:
 
-📁 Google Drive Dataset Repository:
+* 🧠 Deep Learning Models
+* 🤖 Google Gemini 2.5 Flash
+* 📷 Computer Vision
+* ⚡ FastAPI Backend
+* 🌐 Modern React Frontend
 
-https://drive.google.com/drive/folders/15lIJnX8CfX38zZy8SdtKQtN-jW_hozUF?usp=drive_link
+to deliver automated defect detection and professional inspection reports.
 
-### Dataset Categories
-
-The dataset includes images belonging to:
-
-- 💧 Water Seepage
-- 🦠 Mold Growth
-- 🌿 Algae Formation
-- 🎨 Surface Stains
-- 🏢 Major Cracks
-- 🏢 Minor Cracks
-- 🧱 Spalling
-- 🎨 Peeling Paint
-- ✅ Healthy Surfaces
-
-### Dataset Purpose
-
-The dataset was curated and organized to support:
-
-- Construction defect detection
-- Structural condition assessment
-- Moisture-related damage identification
-- Deep learning model training and evaluation
+Unlike traditional image classifiers, ConstructGuard AI first validates whether an uploaded image is genuinely related to construction or infrastructure inspection before performing any defect analysis.
 
 ---
 
-# 🧠 Trained Models
+# ✨ Key Features
 
-ConstructGuard AI employs a hierarchical deep learning architecture consisting of multiple TensorFlow/Keras models.
-
-### Model Repository
-
-📁 Google Drive Models Repository:
-
-https://drive.google.com/drive/folders/1SbuypC_pil5ivAY1XNpoJo8AjghUhqSw?usp=drive_link
-
-### Models Used
-
-#### 🚦 Router Model
-
-**File:**
-
-```text
-cg_router.keras
-```
-
-**Purpose:**
-
-- Performs high-level defect categorization.
-- Routes images to the appropriate specialist model.
+* 🏗️ Construction Defect Detection
+* 🤖 Gemini-Powered Image Validation
+* 🧠 Multi-Model Classification Pipeline
+* 📊 Severity Assessment
+* 📄 AI-Generated Inspection Reports
+* 🎯 Specialized Moisture & Structural Models
+* 📷 Grad-CAM Visual Explanations
+* 📑 PDF Report Export
+* 📱 Responsive User Interface
+* ☁️ Cloud Deployment
 
 ---
 
-#### 💧 Moisture Specialist Model
+# 🧠 AI Inference Pipeline
 
-**File:**
+## Stage 1 – Construction Image Validation
 
-```text
-cg_moisture_specialist.keras
-```
+Every uploaded image is first analyzed using Google Gemini 2.5 Flash.
 
-**Purpose:**
+Gemini verifies whether the image contains:
 
-Classifies moisture-related defects:
+* Buildings
+* Walls
+* Concrete Structures
+* Infrastructure Components
+* Construction Sites
+* Structural Defects
 
-- Water Seepage
-- Mold
-- Algae
-- Stains
+If the image is unrelated to construction:
+
+❌ Analysis Not Performed
+
+Examples:
+
+Valid:
+
+* Cracks
+* Buildings
+* Walls
+* Concrete Surfaces
+
+Invalid:
+
+* Humans
+* Animals
+* Vehicles
+* Food
+* Landscapes
+* Random Objects
 
 ---
 
-#### 🏢 Structural Specialist Model
+## Stage 2 – Router Model
 
-**File:**
+After validation:
 
-```text
-cg_structural_specialist.keras
-```
+Input Image → Router Model
 
-**Purpose:**
+The Router Model predicts:
 
-Classifies structural defects:
-
-- Major Crack
-- Minor Crack
-- Spalling
-- Peeling Paint
-- Healthy Surface
+* Moisture
+* Structural
+* Surface
+* Healthy
 
 ---
 
-### Model Architecture
+## Stage 3 – Specialist Models
 
-The inference pipeline follows:
+### Moisture Specialist
+
+Detects:
+
+* Water Seepage
+* Mold
+* Algae
+* Stains
+
+### Structural Specialist
+
+Detects:
+
+* Major Crack
+* Minor Crack
+* Spalling
+* Peeling Paint
+* Healthy Surface
+
+---
+
+## Stage 4 – Gemini Report Generation
+
+Gemini 2.5 Flash generates:
+
+* Defect Explanation
+* Severity Assessment
+* Risk Analysis
+* Repair Recommendations
+* Professional Inspection Summary
+
+---
+
+# 🏛️ Complete System Architecture
 
 ```text
 Input Image
+     │
+     ▼
+Google Gemini 2.5 Flash
+Construction Validation
+     │
+     ├────────► Invalid Image
+     │              │
+     │              ▼
+     │      Analysis Not Performed
+     │
+     ▼
+Valid Construction Image
      │
      ▼
 Router Model
@@ -157,168 +186,85 @@ Router Model
  ▼        ▼
 Moisture  Structural
 Model     Model
-     │
-     ▼
- Gemini AI Analysis
-     │
-     ▼
- Final Inspection Report
+ │          │
+ └────┬─────┘
+      ▼
+Google Gemini 2.5 Flash
+Report Generation
+      │
+      ▼
+Final Inspection Report
 ```
 
-### Framework
+# 📂 Dataset
 
-- TensorFlow
-- Keras
-- OpenCV
-- NumPy
+Dataset Repository:
 
----
+https://drive.google.com/drive/folders/15lIJnX8CfX38zZy8SdtKQtN-jW_hozUF?usp=drive_link
 
+### Categories
 
-# 📖 Overview
+* Water Seepage
+* Mold
+* Algae
+* Stains
+* Major Crack
+* Minor Crack
+* Spalling
+* Peeling Paint
+* Healthy Surface
 
-ConstructGuard AI is a full-stack AI application developed to assist engineers, inspectors, researchers, and construction professionals in identifying visible construction defects from images.
-
-The system combines:
-
-- 🧠 Deep Learning Models
-- 🤖 Google Gemini AI
-- 📷 Computer Vision
-- 🌐 Modern Web Technologies
-
-to provide intelligent defect detection and detailed inspection reports.
-
-Instead of manually inspecting images, users can simply upload a construction image and receive:
-
-✅ Defect Classification
-
-✅ Severity Assessment
-
-✅ Visual Explanation
-
-✅ AI-Generated Report
-
-✅ Recommended Corrective Actions
+Dataset was curated for construction defect detection and structural inspection research.
 
 ---
 
-# ✨ Key Features
+# 🧠 Models Used
 
-## 🏗️ Construction Defect Detection
+Model Repository:
 
-Automatically identifies:
+https://drive.google.com/drive/folders/1SbuypC_pil5ivAY1XNpoJo8AjghUhqSw?usp=drive_link
 
-- Major Cracks
-- Minor Cracks
-- Water Seepage
-- Mold Growth
-- Algae Formation
-- Surface Stains
-- Spalling
-- Peeling Paint
-- Healthy Structures
-
----
-
-## 🧠 Multi-Model AI Pipeline
-
-The platform uses a hierarchical AI architecture:
-
-### 1️⃣ Router Model
-
-Determines the broad defect category.
-
-### 2️⃣ Specialist Models
-
-Perform fine-grained classification.
-
-- Moisture Specialist Model
-- Structural Specialist Model
-
-### 3️⃣ Gemini AI Analysis
-
-Generates:
-
-- Professional inspection summaries
-- Severity explanations
-- Repair recommendations
-- Risk assessments
-
----
-
-## 🎨 Modern User Interface
-
-- Responsive Design
-- Real-Time Analysis
-- Interactive Dashboard
-- PDF Report Generation
-- Defect Guide
-- Analysis History
-- Settings Management
-
----
-
-# 🏛️ System Architecture
+### Router Model
 
 ```text
-User
- │
- ▼
-Cloudflare Pages Frontend
- │
- ▼
-FastAPI Backend (HF Spaces)
- │
- ▼
-Router Model
- ├── Moisture Specialist
- └── Structural Specialist
- │
- ▼
-Gemini AI Analysis
- │
- ▼
-Prediction + Recommendations
- │
- ▼
-Professional Inspection Report
+cg_router.keras
 ```
 
----
+Routes images to specialist models.
 
-# 🧠 AI Pipeline
+### Moisture Specialist Model
 
 ```text
-Construction Image
-       │
-       ▼
- Image Validation
-       │
-       ▼
- Router Model
-       │
- ┌─────┴─────┐
- ▼           ▼
-Moisture   Structural
-Model      Model
- │           │
- └─────┬─────┘
-       ▼
- Gemini AI
-       ▼
- Final Report
+cg_moisture_specialist.keras
 ```
 
----
+Classifies:
 
-# 🎯 Supported Defects
+* Water Seepage
+* Mold
+* Algae
+* Stains
 
-| Category | Defects |
-|-----------|----------|
-| 💧 Moisture | Water Seepage, Mold, Algae, Stains |
-| 🏢 Structural | Major Crack, Minor Crack, Spalling |
-| 🎨 Surface | Peeling Paint |
-| ✅ Healthy | No Significant Defect |
+### Structural Specialist Model
+
+```text
+cg_structural_specialist.keras
+```
+
+Classifies:
+
+* Major Crack
+* Minor Crack
+* Spalling
+* Peeling Paint
+* Healthy Surface
+
+Frameworks:
+
+* TensorFlow
+* Keras
+* OpenCV
+* NumPy
 
 ---
 
@@ -326,71 +272,33 @@ Model      Model
 
 ## Frontend
 
-<p>
-<img src="https://skillicons.dev/icons?i=react,vite,javascript,html,css" />
-</p>
-
-- React
-- Vite
-- JavaScript
-- React Router
-- Framer Motion
-- jsPDF
-- Recharts
-
----
+* React
+* Vite
+* React Router
+* Framer Motion
+* Recharts
+* jsPDF
 
 ## Backend
 
-<p>
-<img src="https://skillicons.dev/icons?i=python,fastapi,tensorflow" />
-</p>
-
-- FastAPI
-- TensorFlow
-- Keras
-- OpenCV
-- Pillow
-- NumPy
-
----
+* FastAPI
+* TensorFlow
+* Keras
+* OpenCV
+* Pillow
+* NumPy
 
 ## AI & ML
 
-- TensorFlow/Keras
-- Computer Vision
-- Grad-CAM Visualization
-- Google Gemini API
-
----
+* Google Gemini 2.5 Flash
+* TensorFlow
+* Computer Vision
+* Grad-CAM
 
 ## Deployment
 
-| Service | Platform |
-|----------|----------|
-| 🌐 Frontend | Cloudflare Pages |
-| ⚡ Backend | Hugging Face Spaces |
-| 🤖 AI Reports | Google Gemini API |
-
----
-
-# 📂 Project Structure
-
-```text
-ConstructGuard-AI/
-│
-├── frontend_final/
-│
-├── app.py
-├── Dockerfile
-├── requirements.txt
-│
-├── cg_router.keras
-├── cg_moisture_specialist.keras
-├── cg_structural_specialist.keras
-│
-└── README.md
-```
+* Cloudflare Pages
+* Hugging Face Spaces
 
 ---
 
@@ -403,95 +311,71 @@ git clone https://github.com/AYUSHMSINGH2004/ConstructGuard-AI.git
 cd ConstructGuard-AI
 ```
 
----
-
-## Backend Setup
-
-### Create Virtual Environment
+## Backend
 
 ```bash
 python -m venv venv
 ```
 
-### Activate Environment
-
-#### Windows
+Windows:
 
 ```bash
 venv\Scripts\activate
 ```
 
-#### Linux/Mac
+Linux/Mac:
 
 ```bash
 source venv/bin/activate
 ```
 
-### Install Dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run Backend
+Run backend:
 
 ```bash
 uvicorn app:app --reload
 ```
 
-Backend:
-
-```text
-http://localhost:8000
-```
-
----
-
-## Frontend Setup
-
-Install dependencies:
+## Frontend
 
 ```bash
 npm install
-```
-
-Run frontend:
-
-```bash
 npm run dev
 ```
 
-Frontend:
+---
 
-```text
-http://localhost:5173
+# 📡 API Endpoints
+
+## Health Check
+
+```http
+GET /health
 ```
 
----
+## Predict
 
-# 🔐 Gemini API Integration
+```http
+POST /predict
+```
 
-Users provide their own Gemini API Key.
+Form Data:
 
-The key is:
+* file
+* api_key
 
-✅ Never stored permanently
+Returns:
 
-✅ Passed securely to backend
-
-✅ Used only during prediction
-
----
-
-# 🔄 Workflow
-
-1. Upload Construction Image
-2. Validate Image
-3. Router Model Prediction
-4. Specialist Model Analysis
-5. Gemini AI Report Generation
-6. Display Results
-7. Export PDF Report
+* Defect Prediction
+* Confidence Scores
+* Grad-CAM Visualization
+* Gemini Report
+* Recommendations
 
 ---
 
@@ -500,28 +384,26 @@ The key is:
 ```mermaid
 graph TD
 
-A[👤 User]
+A[👤 User Uploads Image]
 
-A --> B[🌐 Cloudflare Pages Frontend]
+A --> B[🤖 Gemini 2.5 Flash Validation]
 
-B --> C[⚡ FastAPI Backend]
+B -->|Invalid Image| C[❌ Analysis Not Performed]
 
-C --> D[🧠 Router Model]
+B -->|Valid Construction Image| D[🧠 Router Model]
 
 D --> E[💧 Moisture Specialist]
 
 D --> F[🏢 Structural Specialist]
 
-E --> G[🤖 Gemini AI]
+E --> G[🤖 Gemini Report Generation]
 
 F --> G
 
 G --> H[📄 Inspection Report]
 
-H --> A
+H --> I[🌐 Frontend Dashboard]
 ```
-
----
 
 # 🔄 Sequence Diagram
 
@@ -531,64 +413,77 @@ sequenceDiagram
 actor User
 
 participant Frontend as Cloudflare Pages Frontend
+participant Gemini as Gemini 2.5 Flash
 participant Backend as FastAPI Backend
 participant Router as Router Model
-participant Moisture as Moisture Specialist Model
-participant Structural as Structural Specialist Model
-participant Gemini as Google Gemini AI
+participant Moisture as Moisture Specialist
+participant Structural as Structural Specialist
 
-User->>Frontend: Upload Construction Image
-
-User->>Frontend: Enter Gemini API Key
+User->>Frontend: Upload Image
 
 Frontend->>Backend: POST /predict
 
-Backend->>Backend: Validate Image
+Backend->>Gemini: Validate Construction Image
 
-Backend->>Gemini: Verify Construction Image
+alt Invalid Image
 
-Gemini-->>Backend: VALID
+Gemini-->>Backend: Not Construction Related
+
+Backend-->>Frontend: Analysis Not Performed
+
+else Valid Image
+
+Gemini-->>Backend: Construction Related
 
 Backend->>Router: Predict Category
 
-alt Moisture Defect
+alt Moisture
+
 Router-->>Backend: Moisture
-Backend->>Moisture: Predict Subclass
+
+Backend->>Moisture: Classification
+
 Moisture-->>Backend: Result
-else Structural Defect
+
+else Structural
+
 Router-->>Backend: Structural
-Backend->>Structural: Predict Subclass
+
+Backend->>Structural: Classification
+
 Structural-->>Backend: Result
+
 end
 
-Backend->>Gemini: Generate Analysis
+Backend->>Gemini: Generate Report
 
-Gemini-->>Backend: Report + Recommendations
+Gemini-->>Backend: Recommendations
 
-Backend-->>Frontend: Prediction Response
+Backend-->>Frontend: Final Analysis
 
 Frontend-->>User: Display Results
+
+end
 ```
+
+# 👥 Contributors
+
+| Contributor            | Role                                                |
+| ---------------------- | --------------------------------------------------- |
+| Ayush M Singh          | Project Lead, AI/ML, Backend, Frontend, Deployment  |
+| Venkata Sriram Topalli | Research, Dataset Preparation, Testing & Validation |
 
 ---
 
 # 📈 Future Enhancements
 
-- 📱 Mobile Application
-- 📊 Advanced Analytics Dashboard
-- 🏗️ Project Monitoring System
-- 📂 Cloud Report Storage
-- 👥 Multi-User Collaboration
-- 🔔 Real-Time Alerts
-- 🌍 Multi-Language Support
-
----
-
-# 👨‍💻 Author
-
-### Ayush M Singh
-
-🔗 GitHub: https://github.com/AYUSHMSINGH2004
+* Mobile Application
+* Multi-User Support
+* Cloud Report Storage
+* Real-Time Monitoring
+* Project Dashboard
+* Advanced Analytics
+* Multi-Language Support
 
 ---
 
@@ -596,11 +491,9 @@ Frontend-->>User: Display Results
 
 If you found this project useful:
 
-🌟 Star the repository
-
-🍴 Fork the project
-
-📢 Share with others
+* Star ⭐ the repository
+* Fork 🍴 the project
+* Share 📢 with others
 
 ---
 
@@ -608,6 +501,6 @@ If you found this project useful:
 
 ### 🏗️ Building Smarter Construction Inspections with AI
 
-Made with ❤️ using TensorFlow, FastAPI, React and Google Gemini
+Made with ❤️ using React, FastAPI, TensorFlow and Google Gemini 2.5 Flash
 
 </div>
