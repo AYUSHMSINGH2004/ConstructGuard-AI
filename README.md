@@ -507,10 +507,6 @@ If you found this project useful:
 
 ---
 
-<div align="center">
+# 📜 License
 
-### 🏗️ Building Smarter Construction Inspections with AI
-
-Made with ❤️ using React, FastAPI, TensorFlow and Google Gemini 2.5 Flash
-
-</div>
+Educational / Academic Use Only
