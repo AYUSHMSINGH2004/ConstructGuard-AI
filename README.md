@@ -468,13 +468,23 @@ end
 
 # 👥 Contributors
 
-| Contributor            | Role                                                |
-| ---------------------- | --------------------------------------------------- |
-| Ayush M Singh          | Project Lead, AI/ML, Backend, Frontend, Deployment  |
-| Venkata Sriram Topalli | Research, Dataset Preparation, Testing & Validation |
+## 👨‍💻 Ayush M Singh
+
+- Project Lead
+- AI/ML Development
+- Backend Development
+- Deployment & Integration
+- Testing & Validation
+
+## 👨‍💻 Venkata Sriram Topalli
+
+- Frontend Development
+- Dataset Preparation
+- Research & Documentation
+- Backend Development
+- Testing & Validation
 
 ---
-
 # 📈 Future Enhancements
 
 * Mobile Application
